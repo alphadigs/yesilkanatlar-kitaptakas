@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilim | Yeşil Kanatlar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Yeşil Kanatlar</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="kitaplar.html">Kitaplar</a></li>
+            <li><a href="iletisim.html">DM</a></li>
+            <li><a href="profil.html">Profil</a></li>
+        </ul>
+    </nav>
+    <main class="profile-section">
+        <div class="profile-card" id="profileCard">
+            <img id="profilePic" src="https://ui-avatars.com/api/?name=Profil" alt="Profil Fotoğrafı">
+            <h2 id="profileUsername">Kullanıcı Adı</h2>
+            <p id="profileEmail">E-posta</p>
+            <form id="profilePicForm">
+                <input type="file" id="profilePicInput" accept="image/*">
+                <button type="submit">Fotoğrafı Güncelle</button>
+            </form>
+        </div>
+        <div class="basket-section">
+            <h3>Sepetim</h3>
+            <ul id="basketList"></ul>
+        </div>
+        <div class="mybooks-section">
+            <h3>Eklediğim Kitaplar</h3>
+            <ul id="myBooksList"></ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Yeşil Kanatlar | Kitap Takas Platformu</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

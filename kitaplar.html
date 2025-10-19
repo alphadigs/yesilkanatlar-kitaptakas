@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitaplar | Yeşil Kanatlar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Yeşil Kanatlar</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="kitaplar.html">Kitaplar</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="#" id="loginBtn">Giriş/Kayıt</a></li>
+        </ul>
+    </nav>
+    <main class="books-section">
+        <h1>Kitaplar</h1>
+        <div class="books-list" id="booksList">
+            <!-- Kitap kartları buraya dinamik olarak eklenecek -->
+        </div>
+        <button class="add-book-btn" id="addBookBtn">+ Kitap Ekle</button>
+    </main>
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Yeni Kitap Ekle</h2>
+            <form id="bookForm">
+                <input type="text" placeholder="Kitap Adı" required>
+                <input type="text" placeholder="Yazar" required>
+                <input type="text" placeholder="Kategori" required>
+                <input type="number" placeholder="Yıl" required>
+                <textarea placeholder="Açıklama" required></textarea>
+                <input type="file" accept="image/*" required>
+                <select required>
+                    <option value="takas">Takas</option>
+                    <option value="satış">Satış</option>
+                </select>
+                <button type="submit">Ekle</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Yeşil Kanatlar | Kitap Takas Platformu</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

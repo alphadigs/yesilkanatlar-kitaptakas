@@ -1,0 +1,9 @@
+# Node.js backend
+backend/node_modules/
+backend/uploads/
+backend/kitap-takas.db
+
+# Frontend build artifacts
+*.log
+.DS_Store
+.env

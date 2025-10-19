@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+    --primary: #43a047;
+    --accent: #ffd600;
+    --bg: #f5fff7;
+    --text: #222;
+    --card: #fff;
+    --shadow: 0 4px 24px rgba(67,160,71,0.12);
+    --radius: 18px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 40px; background: var(--primary); color: #fff;
+    box-shadow: var(--shadow);
+}
+.logo { font-size: 2rem; font-weight: 700; letter-spacing: 1px; }
+.nav-links { list-style: none; display: flex; gap: 28px; }
+.nav-links a {
+    text-decoration: none; color: #fff; font-size: 1.1rem; font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.hero-section {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    padding: 60px 10vw 40px 10vw; background: linear-gradient(120deg, #e8f5e9 60%, #fffde7 100%);
+    min-height: 60vh;
+}
+.hero-content { flex: 1 1 350px; }
+.hero-content h1 {
+    font-size: 3rem; color: var(--primary); margin-bottom: 12px;
+    animation: fadeInDown 1s;
+}
+.hero-content p { font-size: 1.3rem; margin-bottom: 24px; animation: fadeIn 1.5s; }
+.cta-btn {
+    background: var(--primary); color: #fff; border: none; padding: 14px 38px;
+    border-radius: var(--radius); font-size: 1.2rem; cursor: pointer;
+    font-weight: 600; box-shadow: var(--shadow); transition: background 0.2s, transform 0.2s;
+    animation: fadeInUp 2s;
+}
+.cta-btn:hover { background: #388e3c; transform: scale(1.05); }
+.hero-animation {
+    flex: 1 1 250px; display: flex; justify-content: center; align-items: center; position: relative;
+    min-height: 250px;
+}
+.book-float {
+    width: 90px; height: 120px; background: var(--card); border-radius: 8px;
+    box-shadow: var(--shadow); position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    animation: floatBook 3s infinite ease-in-out;
+    background-image: linear-gradient(145deg, #c8e6c9 60%, #fffde7 100%);
+}
+.book-float.delay { animation-delay: 1s; left: 30%; top: 60%; transform: rotate(12deg); }
+.book-float.delay2 { animation-delay: 2s; left: 70%; top: 40%; transform: rotate(-14deg); }
+@keyframes floatBook {
+    0%,100% { transform: translate(-50%, -50%) scale(1) rotate(-10deg); }
+    50% { transform: translate(-50%, -60%) scale(1.08) rotate(5deg); }
+}
+@keyframes fadeInDown { 0%{opacity:0;transform:translateY(-40px);} 100%{opacity:1;transform:translateY(0);} }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+@keyframes fadeInUp { 0%{opacity:0;transform:translateY(40px);} 100%{opacity:1;transform:translateY(0);} }
+.about-section {
+    padding: 60px 10vw; background: #fff; border-radius: var(--radius);
+    margin: 40px 8vw; box-shadow: var(--shadow);
+    animation: fadeIn 1.5s;
+}
+.about-section h2 { color: var(--primary); font-size: 2.2rem; margin-bottom: 18px; }
+.features { display: flex; gap: 36px; margin-top: 28px; flex-wrap: wrap; }
+.feature-card {
+    flex: 1 1 180px; background: var(--bg); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 32px 20px; text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+    animation: fadeInUp 2s;
+}
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.04); box-shadow: 0 8px 32px rgba(67,160,71,0.20);
+}
+.feature-card span { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+.books-section {
+    padding: 50px 10vw; min-height: 60vh;
+}
+.books-section h1 { color: var(--primary); font-size: 2.4rem; margin-bottom: 30px; }
+.books-list {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 40px;
+}
+.book-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 22px; transition: transform 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column; align-items: center;
+    animation: fadeIn 1.2s;
+}
+.book-card:hover {
+    transform: scale(1.04); box-shadow: 0 8px 32px rgba(67,160,71,0.18);
+}
+.book-card img {
+    width: 100px; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 18px;
+}
+.book-card h3 { font-size: 1.2rem; margin-bottom: 6px; color: var(--primary); }
+.book-card p { font-size: 0.95rem; margin-bottom: 4px; }
+.add-book-btn {
+    background: var(--accent); color: var(--primary); border: none; padding: 12px 28px;
+    border-radius: var(--radius); font-size: 1.1rem; font-weight: 600; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: var(--shadow);
+}
+.add-book-btn:hover { background: #ffe082; transform: scale(1.05); }
+.modal {
+    display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(67,160,71,0.15); justify-content: center; align-items: center;
+}
+.modal.active { display: flex; }
+.modal-content {
+    background: #fff; padding: 36px 28px; border-radius: var(--radius);
+    box-shadow: var(--shadow); min-width: 320px; position: relative;
+    animation: fadeInDown 0.7s;
+}
+.close {
+    position: absolute; top: 10px; right: 18px; font-size: 1.8rem; color: var(--primary); cursor: pointer;
+}
+.contact-section {
+    padding: 60px 10vw; min-height: 60vh;
+}
+.contact-section h1 { color: var(--primary); font-size: 2.2rem; margin-bottom: 30px; }
+.contact-form {
+    display: flex; flex-direction: column; gap: 18px; max-width: 400px; margin-bottom: 34px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 12px; border-radius: var(--radius); border: 1px solid #c8e6c9;
+    font-size: 1rem;
+}
+.contact-form button {
+    background: var(--primary); color: #fff; border: none; padding: 12px 0;
+    border-radius: var(--radius); font-size: 1.1rem; font-weight: 600; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.contact-form button:hover { background: #388e3c; transform: scale(1.04); }
+.contact-info { margin-top: 18px; color: #555; }
+footer {
+    padding: 24px 0; text-align: center; background: #e8f5e9; color: #555;
+    margin-top: 40px; font-size: 1rem; border-radius: var(--radius) var(--radius) 0 0;
+}
+@media (max-width: 900px) {
+    .hero-section, .about-section, .books-section, .contact-section {
+        padding: 30px 3vw;
+    }
+    .features { flex-direction: column; gap: 18px; }
+}
+@media (max-width: 600px) {
+    .navbar { flex-direction: column; gap: 12px; padding: 18px 12px; }
+    .hero-content h1 { font-size: 2.1rem; }
+    .about-section h2, .books-section h1, .contact-section h1 { font-size: 1.3rem; }
+    .modal-content { min-width: 90vw; }
+}
