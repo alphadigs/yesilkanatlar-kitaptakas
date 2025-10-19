@@ -1,6 +1,6 @@
 // Navbar scroll effect, modal controls, and interactive animations
 // Backend API URL
-const API_URL = 'http://localhost:3001/api';
+yesilkanatlar-kitaptakas-production.up.railway.app;
 
 window.addEventListener('DOMContentLoaded', () => {
     // Navbar shrink on scroll
